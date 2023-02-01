@@ -13,9 +13,11 @@
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/a" />
 
     <TextView
         android:id="@+id/cityTextView"
@@ -26,11 +28,11 @@
         android:layout_marginTop="25dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="Enter The City"
+        android:text="City Name"
         android:textAllCaps="true"
         android:textColor="@android:color/background_light"
-        android:textSize="36dp"
-        android:textStyle="normal|italic"
+        android:textSize="26dp"
+        android:textStyle="normal|bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView9"
@@ -44,16 +46,16 @@
         android:layout_marginStart="13dp"
         android:layout_marginLeft="13dp"
         android:layout_marginTop="45dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="19dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="22dp"
-        android:ems="10"
-        android:hint="CITY"
+        android:ems="12"
+        android:hint=" ENTER CITY NAME"
         android:inputType="textPersonName"
         android:textColor="@android:color/background_light"
         android:textColorHint="@android:color/darker_gray"
         android:textSize="20dp"
-        android:textStyle="italic"
+        android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@+id/check"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -63,16 +65,18 @@
 
     <Button
         android:id="@+id/check"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200px"
+        android:layout_height="100px"
         android:layout_marginStart="156dp"
         android:layout_marginLeft="156dp"
         android:layout_marginTop="22dp"
         android:layout_marginEnd="156dp"
         android:layout_marginRight="156dp"
         android:layout_marginBottom="60dp"
-        android:alpha="0.25"
+        android:background="#ffff"
+        android:alpha="1"
         android:color="#66FF0000"
+        android:textColor="@color/colorAccent"
         android:onClick="getWeather"
         android:text="Check"
         android:textStyle="bold"
@@ -114,7 +118,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="175dp"
         android:layout_marginRight="175dp"
         android:textColor="@android:color/background_light"
@@ -123,7 +126,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView9"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempTextView" />
+        app:layout_constraintTop_toTopOf="@+id/maxTempTextView" />
 
     <TextView
         android:id="@+id/maxTempTextView"
@@ -161,10 +164,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="1250dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/imageView9"
-        app:layout_constraintTop_toTopOf="parent">
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempTextView">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -197,7 +200,7 @@
                     android:text="Sunrise"
                     android:textColor="@android:color/background_light"
                     android:textSize="18sp"
-                    android:textStyle="italic" />
+                    android:textStyle="normal" />
 
                 <TextView
                     android:id="@+id/sunriseTextView"
@@ -205,8 +208,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/background_light"
                     android:textSize="18sp"
-                    android:textStyle="italic"
-                    />
+                    android:textStyle="italic" />
             </LinearLayout>
 
             <Space
@@ -238,7 +240,7 @@
                     android:text="Sunset"
                     android:textColor="@android:color/background_light"
                     android:textSize="18dp"
-                    android:textStyle="italic" />
+                    android:textStyle="normal" />
 
                 <TextView
                     android:id="@+id/sunsetTextVIew"
@@ -246,8 +248,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/background_light"
                     android:textSize="18sp"
-                    android:textStyle="italic"
-                    />
+                    android:textStyle="italic" />
             </LinearLayout>
 
             <Space
@@ -279,7 +280,7 @@
                     android:text="Wind"
                     android:textColor="@android:color/background_light"
                     android:textSize="18dp"
-                    android:textStyle="italic" />
+                    android:textStyle="normal" />
 
                 <TextView
                     android:id="@+id/windTextView"
@@ -287,8 +288,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/background_light"
                     android:textSize="18sp"
-                    android:textStyle="italic"
-                    />
+                    android:textStyle="italic" />
             </LinearLayout>
         </LinearLayout>
 
@@ -309,7 +309,7 @@
                 android:background="#3CF1EBF1"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="25dp"
@@ -328,7 +328,7 @@
                     android:text="Pressure"
                     android:textColor="@android:color/background_light"
                     android:textSize="18sp"
-                    android:textStyle="italic" />
+                    android:textStyle="normal" />
 
                 <TextView
                     android:id="@+id/pressureTextView"
@@ -336,8 +336,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/background_light"
                     android:textSize="18sp"
-                    android:textStyle="italic"
-                    />
+                    android:textStyle="italic" />
             </LinearLayout>
 
             <Space
@@ -351,7 +350,7 @@
                 android:background="#3CF1EBF1"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="25dp"
@@ -367,20 +366,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Humidity"
-                    android:textSize="18dp"
                     android:textColor="@android:color/background_light"
-                    android:textStyle="italic"
-                    />
+                    android:textSize="18dp"
+                    android:textStyle="normal" />
 
                 <TextView
                     android:id="@+id/humidityTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:textSize="18dp"
                     android:textColor="@android:color/background_light"
-                    android:textStyle="italic"
-                    />
+                    android:textSize="18dp"
+                    android:textStyle="italic" />
             </LinearLayout>
 
             <Space
@@ -394,11 +391,12 @@
                 android:background="#3CF1EBF1"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:padding="5dp">
 
                 <ImageView
                     android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
                     android:src="@drawable/info"
                     android:tint="#FFFFFF" />
 
@@ -409,7 +407,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Created By"
+                    android:text="Developed By"
                     android:textColor="@android:color/background_light"
                     android:textSize="18sp"
                     android:textStyle="italic" />
@@ -418,7 +416,7 @@
                     android:id="@+id/about"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
-                    android:text="Ritesh"
+                    android:text="Sonu Kr. Jha"
                     android:textColor="@android:color/background_light"
                     android:textSize="18sp"
                     android:textStyle="italic" />
